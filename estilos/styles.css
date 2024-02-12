@@ -1,0 +1,159 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&display=swap');/*copie o caminho do google fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+:root{/*como declarar variaveis globais*/
+    --cor-principal:#27005D;
+    --cor-secundaria:#9400FF;
+    --cor-terciaria:#AED2FF;
+    --cor-quata:#E4F1FF;
+
+    --fonte-principal:'Krona One', sans-serif;
+    --fonte--secundaria:'Montserrat', sans-serif;
+}
+
+*{/*Todas as margnens da página*/
+    margin: 0;
+    padding: 0;
+}
+
+.cabecalho{
+    padding: 2% 0% 0% 15%;
+}
+
+.cabecalho__menu{
+    display: flex;
+    gap: 80px;
+}
+
+.cabecalho__menu__link{
+    font-family: var(--fonte--secundaria);
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--cor-terciaria);
+    text-decoration: none;/* para tirar o sublinhado abaixo da palavra*/
+
+}
+
+body{
+
+    /*height: 100vh; pegar toda a página*/
+
+    box-sizing: border-box;/*Para que nada, nem texto ou imágem saia de dentro dos limites do body*/
+
+    background-color: var(--cor-principal); /*Ao inves de balck pode colocaf o codigo RGB*/
+    /* color: white; Pode colocar a cor da letra com o nome ou da forma a baixo com o codigo. */
+    color: var(--cor-secundaria);
+
+}
+
+.Titulo-destacado{
+    color: var(--cor-terciaria);
+}
+
+.linguagens{
+    color: var(--cor-terciaria);
+}
+
+.apresentacao{/*Está classe de main alinha os textos e imagens dentro do body*/
+    padding: 5% 15%; /*quando coloca-se apenas dois valores o primeiro é para cima e baixo e o segundo é para os lados.*/
+    display: flex;
+    align-items:center;
+    justify-content: space-between;
+    gap: 82px;
+}
+
+.apresentacao__conteudo{
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.apresentacao__conteudo__titulo{
+    font-family: var(--fonte-principal);/*copie google fonts e coloque aqui como usar a fonte */
+    font-size: 2.25rem;
+}
+
+.apresentacao__conteudo__titulo__texto{
+    font-size: 1.5rem;
+    font-family: var(--fonte--secundaria);
+}
+
+.apresentacao__conteudo__titulo__about{
+    color:  var(--cor-quata);
+    font-size: 2.25rem;
+}
+
+.apresentacao__links{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+}
+
+.apresentacao__links__titulo{
+    font-family: var(--fonte-principal);
+    font-weight: 400;
+    font-size: 1.5rem;
+
+}
+
+.apresentacao__links__link{
+    /* background-color: #22d4fd; para colocar a cor do botão*/
+    border: solid var(--cor-terciaria) 2px;/*esse solide antes da cor é necessario. mas pode ser o "dashed", pontilhado ou outro.*/
+    width: 50%;
+    padding: 21.5px 0;/*quando coloca so o padding coloque para o eixo horizontal depois o vertical.*/
+    border-radius: 16px;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-decoration: none;
+    color: var(--cor-secundaria);
+    font-family: var(--fonte--secundaria);
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+}
+
+.apresentacao__links__link:hover{/*É a mesma classe de cima mas, o ":hover serve para dar um efeito de mudança de cor
+    de fundo, cor da letra e outros efeitos ao passar o mouse por cima."*/
+    background-color: #272727;
+    color: aquamarine;
+}
+
+.apresentacao__img{
+    width: 50%;
+}
+
+.rodape{
+    color: var(--cor-principal);
+    background-color: var(--cor-terciaria);
+    padding: 24px;
+    text-align: center;
+    font-size: 1.5rem;
+    font-family: var(--fonte--secundaria);
+    font-weight: 400;
+}
+
+/*media serve para trazer uma responsibilidade para o aplicatico se por exemplo ele for aberto na tela de um celular.*/
+@media (max-width: 1200px ){
+
+    .cabecalho{
+        padding: 10%;
+    }
+
+    .cabecalho__menu{
+        justify-content: center;
+    }
+
+    .apresentacao{
+        flex-direction: column-reverse;
+        padding: 5%; /*quando coloca-se apenas um valor ele serve para todos os lados para os lados.*/
+    }
+
+    .apresentacao__conteudo{
+        width: auto; /*auto é de automático, para usar mais a largura da tela*/
+    }
+}
